@@ -346,7 +346,7 @@ You may filter raids on raid levels and by specific pokemons in a similar fashio
 
 Raid filters has 4 sections: enabled, filters, default pokemon filtering and individual pokemon filtering
 
-````json
+```json
 "raids": {
     "enabled": "False",
     "filters": {
@@ -363,7 +363,7 @@ Raid filters has 4 sections: enabled, filters, default pokemon filtering and ind
     },
     "Bulbasaur": { "True" } 
 }
-````
+```
 
 
 ### General raid filters
@@ -417,7 +417,7 @@ Below is a description of all meaningful filters available at both Default and S
 
 **Report all Raids of any level**
 
-````json
+```json
 "raids": {
     "enabled": "True",
     "filters": {
@@ -436,11 +436,11 @@ Below is a description of all meaningful filters available at both Default and S
     "Ivysaur": "True",
     "Venusaur": "True"
 }
-````
+```
 
 **Only report raids once we know the pokemon**
 
-````json
+```json
 "raids": {
     "enabled": "True",
     "filters": {
@@ -459,12 +459,12 @@ Below is a description of all meaningful filters available at both Default and S
     "Ivysaur": "True",
     "Venusaur": "True"
 }
-````
+```
 
 **Only report Eggs level 4 and 5, do not send alarms about pokemon**
 
 Currently you can only disable alarms on raids pokemon by setting max cp to 1 and deleting the specific pokemon section. 
-````json
+```json
 "raids": {
     "enabled": "True",
     "filters": {
@@ -480,7 +480,7 @@ Currently you can only disable alarms on raids pokemon by setting max cp to 1 an
         "ignore_missing": "False"
     }
 }
-````
+```
 
 **Report Eggs level 3 and higher, but specific level 2 pokemon**
 
