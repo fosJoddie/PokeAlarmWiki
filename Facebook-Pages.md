@@ -58,7 +58,7 @@ These optional parameters are entered at the same level as `"type":"facebookpage
 |--------------------|------------------------------------------------------------|------------------------------|
 | `startup_message`  | confirmation post when PokeAlarm initialized               | `True`                       |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid`, and `gym` sections of the JSON file.
 Check Image column to see where everything appears in the final publication.
 
 ![](images/Facebook.png)  
@@ -112,6 +112,28 @@ For example if you have `link` as a google maps link and you disable the `image`
 | `description`    | `It is now controlled by <new_team>`  |
 | `caption`        |  None  |
 
+`egg` default values:
+
+| Parameters       |  Default                                       |
+| -----------------|-----------------------------------------------|
+| `message`        | `A level <raid_level> raid is upcoming!` |
+| `image`          | `https://raw.githubusercontent.com/fosJoddie/PokeAlarm/raids/icons/egg_<raid_level>.png`|
+| `link`           | `<gmaps>`|
+| `name`           | `Egg`|
+| `description     | `The egg will hatch <begin_24h_time> (<begin_time_left>).`|
+| `caption`        | None |    
+    
+`raid` default values:    
+    
+| Parameters       |  Default                                       |
+| -----------------|-----------------------------------------------|
+| `message`        | `A Raid is available against <pkmn>!`|
+| `image`          | `https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png`|
+| `link`           | `<gmaps>`|
+| `name`           | `Raid`|
+| `description`    | `The raid is available until <24h_time> (<time_left>).`|
+| `caption`        | None |
+
 
 
 ## Example: Alarm Configuration Using Optional Parameters
@@ -137,10 +159,24 @@ For example if you have `link` as a google maps link and you disable the `image`
 	"gym":{
 		"message":"A Team <old_team> gym has fallen! It is now controlled by <new_team>.",
 		"link": "<gmaps>",
-            	"name": "<new_team>",
+        "name": "<new_team>",
 		"description": "Address: <address>",
 		"image": "",
-	}
+	},
+    "egg": {
+        "message": "A level <raid_level> raid is upcoming!",
+        "image": "https://raw.githubusercontent.com/fosJoddie/PokeAlarm/raids/icons/egg_<raid_level>.png",
+        "link": "<gmaps>",
+        "name": "Egg",
+        "description": "The egg will hatch <begin_24h_time> (<begin_time_left>).",
+    },
+    "raid": {
+        "message": "A Raid is available against <pkmn>!",
+        "image": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
+        "link": "<gmaps>",
+        "name": "Raid",
+        "description": "The raid is available until <24h_time> (<time_left>).",
+    }
 }
 ```
 **Note:** The above code is to be inserted into the alarms section of alarms.json. It does not represent the entire alarms.json file.

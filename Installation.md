@@ -24,9 +24,9 @@ Below, we'll configure PokeAlarm and set it to listen for POST requests.  Then w
 2. **Install dependencies.** Go into the root directory of your local PokeAlarm folder. Run `pip install -r requirements.txt`.  This will install additional packages that PokeAlarm needs to run.
 
 3. **Configure filters and alarms (and maybe geofences).** (Windows or Mac users: do not use the default text editors like Notepad and TextEdit!)
-    * Make a copy of the `filters.json.example` file and rename it to`filters.json`. Edit `filters.json` with your [filter configuration] settings by setting the Pokemon, Gym, and Pokestop values you want to `"True"`. Visit the [filter configuration] wiki page for details.
+    * Make a copy of the `filters.json.example` file and rename it to`filters.json`. Edit `filters.json` with your [filter configuration] settings by setting the Pokemon, Gym, and Pokestop values you want to `"True"`. Visit the [filter configutation](https://github.com/kvangent/PokeAlarm/wiki/Filters) wiki page for details.
     * Optional: Make a copy of the `geofence.txt.example` file and rename it to`geofence.txt`. Visit the [Geofencing] wiki page for details.
-    * Make a copy of the `alarms.json.example` file and rename it to`alarms.json`. Edit `alarms.json` with your [alarm configuration](https://github.com/kvangent/PokeAlarm/wiki/Alarm-Configuration) settings. Visit the [alarm configuration] wiki page for details.
+    * Make a copy of the `alarms.json.example` file and rename it to`alarms.json`. Edit `alarms.json` with your [alarm configuration](https://github.com/kvangent/PokeAlarm/wiki/Alarms) settings. Visit the [alarm configuration](https://github.com/kvangent/PokeAlarm/wiki/Alarms) wiki page for details.
 
 4. **Start Pokealarm.** Run `python start_pokealarm.py`. You should receive a notification right away, letting you know your alarm has been set up correctly. The default listening address is `http://127.0.0.1:4000`. You can use the `-H HOST -P PORT` arguments to set a custom listening address and port. 
 **Note:** This address/port should be DIFFERENT then the address/port your map is running on.

@@ -61,7 +61,7 @@ These optional parameters are entered at the same level as `"type":"pushbullet"`
 |:-------------------|:-----------------------------------------------------------|:-----------------------------|
 | `startup_message`  | Confirmation post when PokeAlarm initialized               | `True`                       |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid`, and `gym` sections of the JSON file.
 
 | Parameters     | Description                                       | Default                                       |
 |:-------------- |:--------------------------------------------------|:----------------------------------------------|
@@ -94,7 +94,18 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, and
 		"url":"<gmaps>",
 		"body":"It is now controlled by <new_team>.",
 		"channel":"OVERRIDES_DEFAULT_CHANNEL"
-	}
+	},
+    "egg": {
+        "title": "A level <raid_level> raid is incoming!",
+        "url": "<gmaps>",
+        "body": "The egg will hatch <begin_24h_time> (<begin_time_left>).",
+        "channel":"OVERRIDES_DEFAULT_CHANNEL"
+    },
+    "raid": {
+        "title": "A Raid is available against <pkmn>!",
+        "url": "<gmaps>",
+        "body": "The raid is available until <24h_time> (<time_left>)."
+    }
 }
 ```
 **Note:** The above code is to be inserted into the alarms section of alarms.json. It does not represent the entire alarms.json file.

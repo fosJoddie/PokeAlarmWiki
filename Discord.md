@@ -68,7 +68,7 @@ These optional parameters are entered at the same level as `"type":"discord"`.
 |--------------------|----------------------------------------------|
 | `startup_message`  | confirmation post when PokeAlarm initialized |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid`, and `gym` sections of the JSON file.
 
 | Parameters       | Description                                       | Default                                       |
 | -----------------|---------------------------------------------------|-----------------------------------------------|
@@ -114,7 +114,25 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, and
 		"title":"A Team <old_team> gym has fallen!",
 		"url":"<gmaps>",
 		"body": "It is now controlled by <new_team>."
-	}
+	},
+     "egg": {
+         "webhook_url":"DISCORD_WEBHOOK_URL_FOR_EGG_CHANNEL",
+         "username": "Egg",
+         "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+         "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+         "title": "Raid is incoming!",
+         "url": "<gmaps>",
+         "body": "A level <raid_level> raid will hatch <begin_24h_time> (<begin_time_left>)."
+     },
+     "raid": {
+         "webhook_url":"DISCORD_WEBHOOK_URL_FOR_RAID_CHANNEL",
+         "username": "Raid",
+         "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
+         "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+         "title": "Level <raid_level> Raid is available against <pkmn>!",
+         "url": "<gmaps>",
+         "body": "The raid is available until <24h_time> (<time_left>)."
+     }	
 }
 ```
 

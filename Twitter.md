@@ -65,7 +65,7 @@ These optional parameters are entered at the same level as `"type":"twitter"`.
 |:-------------------|:-----------------------------------------------------------|:-----------------------------|
 | `startup_message`  | Confirmation post when PokeAlarm initialized               | `True`                       |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid`, and `gym` sections of the JSON file.
 
 
 | Parameters      | Description                                       | Default                                       |
@@ -89,7 +89,13 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, and
 	},
 	"gym":{
 		"status":"A Team <old_team> gym has fallen! It is now controlled by <new_team>. <gmaps>"
-	}
+	},
+    "egg": {
+        "status": "lvl <raid_level> raid! Hatches at <begin_24h_time> (<begin_time_left>). <gmaps>"
+    },
+    "raid": {
+        "status": "Raid on <pkmn>! Available until <24h_time> (<time_left>). <gmaps>"
+    }
 }
 ```
 **Note:** The above code is to be inserted into the alarms section of `alarms.json`.  It does not represent the entire `alarms.json` file.

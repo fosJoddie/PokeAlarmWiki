@@ -70,7 +70,7 @@ Parameters at the alarm level will be the default to alert-level parameters.
 | `venue`                    | Sends location in main message.                                      | `False` |
 | `startup_message`          | Confirmation post when PokeAlarm initialized                         | `True`  |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` sections of the JSON file. These parameters overide the alarm-level settings for this alert.
+These optional parameters below are applicable to the `pokemon`, `pokestop`,`egg`, `raid`, and `gym` sections of the JSON file. These parameters overide the alarm-level settings for this alert.
 
 | Parameters | Description                                      | Default													|
 | -----------|:-------------------------------------------------|:----------------------------------------------------------|
@@ -85,30 +85,38 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, and
 Below is how an advanced alarm configuration would appear in `alarms.json`. Note that this is **not** the entire `alarms.json`, but only the section pertaining to the alarm portion of the JSON file.
 ```json
 {
-	"active": "False",
-	"type":"telegram",
-	"bot_token":"YOUR_BOT_TOKEN",
-	"chat_id":"YOUR_CHAT_ID",
-	"startup_message:":"True",
-	"stickers": "True",
-	"pokemon" : {
-		"chat_id": "OVERRIDES_DEFAULT_CHANNEL",
-		"title": "A wild <pkmn> has appeared!",
-		"body": "<gmaps> \n Available until <24h_time> (<time_left>).",
-		"location": "True"
-	},
-	"pokestop":{
-		"chat_id": "OVERRIDES_DEFAULT_CHANNEL",
-		"title":"Someone has placed a lure on a Pokestop!",
-		"body": "<gmaps> \n Lure will expire at <24h_time> (<time_left>).",
-		"location": "True"
-	},
-	"gym":{
-		"chat_id": "OVERRIDES_DEFAULT_CHANNEL",
-		"title":"A Team <old_team> gym has fallen!",
-		"body": "<gmaps> \n It is now controlled by <new_team>.",
-		"location": "True"
-	}
+    "active": "False",
+    "type":"telegram",
+    "bot_token":"YOUR_BOT_TOKEN",
+    "chat_id":"YOUR_CHAT_ID",
+    "startup_message:":"True",
+    "stickers": "True",
+    "pokemon" : {
+        "chat_id": "OVERRIDES_DEFAULT_CHANNEL",
+        "title": "A wild <pkmn> has appeared!",
+        "body": "<gmaps> \n Available until <24h_time> (<time_left>).",
+        "location": "True"
+    },
+    "pokestop":{
+        "chat_id": "OVERRIDES_DEFAULT_CHANNEL",
+        "title":"Someone has placed a lure on a Pokestop!",
+        "body": "<gmaps> \n Lure will expire at <24h_time> (<time_left>).",
+        "location": "True"
+    },
+    "gym":{
+        "chat_id": "OVERRIDES_DEFAULT_CHANNEL",
+        "title":"A Team <old_team> gym has fallen!",
+        "body": "<gmaps> \n It is now controlled by <new_team>.",
+        "location": "True"
+    },
+    "egg": {
+        "title": "A level <raid_level> raid is incoming!",
+        "body": "The egg will hatch <begin_24h_time> (<begin_time_left>).",
+    },
+    "raid": {
+        "title": "A raid is available against <pkmn>!",
+        "body": "The raid is available until <24h_time> (<time_left>).",
+    }
 }
 ```
 

@@ -131,3 +131,23 @@ Pokemon standard now includes moveset and IVs as of commit [oc1b4](https://githu
     }
 }
 ```
+
+## Raid Example
+
+```json
+{ 
+    "type": "raid",
+    "message": {
+        "gym_id": "gym_id",
+        "pokemon_id": 200,
+        "cp": 12345,
+        "move_1": 123,
+        "move_2": 123,
+        "start": 1499244052,
+        "end": 1499246052 ,
+        "level": 5,
+        "latitude": 12.345678,
+        "longitude": 12.345678
+    }
+}
+```

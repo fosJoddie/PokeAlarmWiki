@@ -56,7 +56,7 @@ In addition to the above required parameters, several optional parameters are av
 
 ### Optional Parameters
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, and `gym` alarm code of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid` and `gym` alarm code of the JSON file.
 
 #### Optional Pokemon Parameters
 | Parameters    | Description                                       | Default																			|
@@ -78,27 +78,33 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, and
 Below is an example of these optional parameters and how they are incorporated into a functional alarm layout.
 ```json
 {
-	"active": "True",
-	"type":"twilio",
-	"account_sid":"YOUR_API_KEY",
-	"auth_token":"YOUR_AUTH_TOKEN",
-	"from_number":"YOUR_FROM_NUM",
-	"to_number":"YOUR_TO_NUM",
-	"pokemon":{
-		"from_number":"YOUR_FROM_NUM",
-		"to_number":"YOUR_TO_NUM",
-		"message": "A wild <pkmn> has appeared! <gmaps> Available until <24h_time> (<time_left>)."
-	},
-	"pokestop":{
-		"from_number":"YOUR_FROM_NUM",
-		"to_number":"YOUR_TO_NUM",
-		"message": "Someone has placed a lure on a Pokestop! <gmaps> Lure will expire at <24h_time> (<time_left>)."
-	},
-	"gym":{
-		"from_number":"YOUR_FROM_NUM",
-		"to_number":"YOUR_TO_NUM",
-		"message": "A Team <old_team> gym has fallen! It is now controlled by <new_team>. <gmaps>"
-	}
+    "active": "True",
+    "type":"twilio",
+    "account_sid":"YOUR_API_KEY",
+    "auth_token":"YOUR_AUTH_TOKEN",
+    "from_number":"YOUR_FROM_NUM",
+    "to_number":"YOUR_TO_NUM",
+    "pokemon":{
+        "from_number":"YOUR_FROM_NUM",
+        "to_number":"YOUR_TO_NUM",
+        "message": "A wild <pkmn> has appeared! <gmaps> Available until <24h_time> (<time_left>)."
+    },
+    "pokestop":{
+        "from_number":"YOUR_FROM_NUM",
+        "to_number":"YOUR_TO_NUM",
+        "message": "Someone has placed a lure on a Pokestop! <gmaps> Lure will expire at <24h_time> (<time_left>)."
+    },
+    "gym":{
+        "from_number":"YOUR_FROM_NUM",
+        "to_number":"YOUR_TO_NUM",
+        "message": "A Team <old_team> gym has fallen! It is now controlled by <new_team>. <gmaps>"
+    },
+    "egg": {
+        "message": "A level <raid_level> raid is incoming! <gmap> Egg hatches <begin_24h_time> (<begin_time_left>)."
+    },
+    "raid": {
+       "message": "A raid on <pkmn> is available! <gmap> Available until <24h_time> (<time_left>)."
+    }
 }
 ```
 **Note:** The above code is to be inserted into the alarms section of alarms.json. It does not represent the entire alarms.json file.

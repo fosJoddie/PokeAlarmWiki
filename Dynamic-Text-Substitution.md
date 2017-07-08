@@ -132,6 +132,63 @@ A list of text substitutions for the `gym` field in the alarm section are below:
 | `<new_team>`   | Name of the team who captured the gym  |
 *If no location has been set, dist will always return 0 (meters or yards)
 
+## Egg Text
+A list of text substitutions for the `gegg` field in the alarm section are below:
+
+| Text                  | Description                            |
+|:----------------------|:---------------------------------------|
+| `<raid_level>`        | The tier level of the raid (1-5)       |
+| `<lat>`               | Latitude of the raid pokemon           |
+| `<lng>`               | Longitude of the raid pokemon          |
+| `<gmaps>`             | Gmaps link to a pin of the raid        |
+| `<dist>`              | *Distance from set location in meters  |
+| `<time_left>`         | Time remaining before the raid ends    |
+| `<12h_time>`          | Raid end time in 12hour format         |
+| `<24h_time>`          | Raid end time in 24hour format         |
+| `<begin_time_left>`   | Time remaining before the raid begins  |
+| `<begin_12h_time>`    | Raid begin time in 12hour format       |
+| `<begin_24h_time>`    | Raid begin time in 24hour format       |
+| `<dir>`               | Cardinal direction from set location   |
+| `<geofence>`          | Geofence name of where the alarm originated |
+| `<gmaps>`             | Google Maps URL to pokemon location    |
+| `<applemaps>`         | Apple Maps URL to pokemon location     |
+*If no location has been set, dist will always return 0 (meters or yards)
+
+## Raid Text
+A list of text substitutions for the `raid` field in the alarm section are below:
+
+| Text                  | Description                            |
+|:----------------------|:---------------------------------------|
+| `<raid_level>`        | The tier level of the raid (1-5)       |
+| `<pkmn_id>`           | ID of the alerted raid pokemon         |
+| `<pkmn>`              | Name of the alerted raid pokemon       |
+| `<lat>`               | Latitude of the raid pokemon           |
+| `<lng>`               | Longitude of the raid pokemon          |
+| `<gmaps>`             | Gmaps link to a pin of the raid        |
+| `<dist>`              | *Distance from set location in meters  |
+| `<time_left>`         | Time remaining for the raid            |
+| `<12h_time>`          | Raid end time in 12hour format         |
+| `<24h_time>`          | Raid end time in 24hour format         |
+| `<begin_12h_time>`    | Raid begin time in 12hour format       |
+| `<begin_24h_time>`    | Raid begin time in 24hour format       |
+| `<dir>`               | Cardinal direction from set location   |
+| `<quick_move>`        | Quick move of the alerted pokemon      |
+| `<charge_move>`       | Charge move of the alerted pokemon     |
+| `<quick_id>`          | ID number of the quick move            |
+| `<quick_damage>`      | Damage value of quick move             |
+| `<quick_duration>`    | Duration value of quick move           |
+| `<quick_dps>`         | Damage per second value of quick move  |
+| `<quick_energy>`      | Energy of quick move                   |
+| `<charge_id>`         | ID number of charge move               |
+| `<charge_damage>`     |  Damage value of charge move           |
+| `<charge_duration>`   | Duration value of charge move          |
+| `<charge_dps>`        | Damage per second value of charge move | 
+| `<charge_energy>`     | Energy of charge move                  |
+| `<geofence>`          | Geofence name of where the alarm originated |
+| `<gmaps>`             | Google Maps URL to pokemon location    |
+| `<applemaps>`         | Apple Maps URL to pokemon location     |
+*If no location has been set, dist will always return 0 (meters or yards)
+
 ## Reverse Location Text
 The following text substitutions will only work if a Google Maps API Key with Geocoding API enabled has been provided to the PokeAlarm.
 
