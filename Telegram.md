@@ -111,11 +111,11 @@ Below is how an advanced alarm configuration would appear in `alarms.json`. Note
     },
     "egg": {
         "title": "A level <raid_level> raid is incoming!",
-        "body": "The egg will hatch <begin_24h_time> (<begin_time_left>).",
+        "body": "The egg will hatch <begin_24h_time> (<begin_time_left>)."
     },
     "raid": {
         "title": "A raid is available against <pkmn>!",
-        "body": "The raid is available until <24h_time> (<time_left>).",
+        "body": "The raid is available until <24h_time> (<time_left>)."
     }
 }
 ```

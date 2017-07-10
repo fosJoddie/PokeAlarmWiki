@@ -28,7 +28,7 @@ You add alarms to the PokeAlarm alarm configuration file, which is `alarms.json`
 1. Alarms are enable/disabled
 2. Notification messages for each alarm are customized
 
-The alarm configuration file follows the JSON format and has 4 sections:
+The alarm configuration file follows the JSON format and has six sections:
 
 1. `alarms`
 2. `pokestop`
@@ -159,22 +159,22 @@ Below is a working alarm configuration for discord and slack:
       "body": "A team <old_team> gym has fallen to <new_team>."
     },
     "egg": {
-        "webhook_url":"DISCORD_WEBHOOK_URL_FOR_EGG_CHANNEL",
-        "username": "Egg",
-        "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
-        "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
-        "title": "Raid is incoming!",
-        "url": "<gmaps>",
-        "body": "A level <raid_level> raid will hatch <begin_24h_time> (<begin_time_left>)."
+      "webhook_url":"DISCORD_WEBHOOK_URL_FOR_EGG_CHANNEL",
+      "username": "Egg",
+      "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+      "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+      "title": "Raid is incoming!",
+      "url": "<gmaps>",
+      "body": "A level <raid_level> raid will hatch <begin_24h_time> (<begin_time_left>)."
     },
     "raid": {
-        "webhook_url":"DISCORD_WEBHOOK_URL_FOR_RAID_CHANNEL",
-        "username": "Raid",
-        "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
-        "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
-        "title": "Level <raid_level> Raid is available against <pkmn>!",
-        "url": "<gmaps>",
-        "body": "The raid is available until <24h_time> (<time_left>).",
+      "webhook_url":"DISCORD_WEBHOOK_URL_FOR_RAID_CHANNEL",
+      "username": "Raid",
+      "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
+      "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+      "title": "Level <raid_level> Raid is available against <pkmn>!",
+      "url": "<gmaps>",
+      "body": "The raid is available until <24h_time> (<time_left>).",
     }
   },
   {
