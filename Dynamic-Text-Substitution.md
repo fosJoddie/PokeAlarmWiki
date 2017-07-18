@@ -133,7 +133,7 @@ A list of text substitutions for the `gym` field in the alarm section are below:
 *If no location has been set, dist will always return 0 (meters or yards)
 
 ## Egg Text
-A list of text substitutions for the `gegg` field in the alarm section are below:
+A list of text substitutions for the `egg` field in the alarm section are below:
 
 | Text                  | Description                            |
 |:----------------------|:---------------------------------------|

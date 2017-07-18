@@ -174,7 +174,7 @@ Below is a working alarm configuration for discord and slack:
       "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
       "title": "Level <raid_level> Raid is available against <pkmn>!",
       "url": "<gmaps>",
-      "body": "The raid is available until <24h_time> (<time_left>).",
+      "body": "The raid is available until <24h_time> (<time_left>)."
     }
   },
   {

@@ -56,7 +56,7 @@ In addition to the above required parameters, several optional parameters are av
 
 ### Optional Parameters
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid` and `gym` alarm code of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `gym`, `egg`, and `raid` alarm code of the JSON file.
 
 #### Optional Pokemon Parameters
 | Parameters    | Description                                       | Default																			|

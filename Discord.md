@@ -68,7 +68,7 @@ These optional parameters are entered at the same level as `"type":"discord"`.
 |--------------------|----------------------------------------------|
 | `startup_message`  | confirmation post when PokeAlarm initialized |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `gym`, `egg`, and `raid` sections of the JSON file.
 
 | Parameters       | Description                                       | Default                                       |
 | -----------------|---------------------------------------------------|-----------------------------------------------|

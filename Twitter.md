@@ -65,7 +65,7 @@ These optional parameters are entered at the same level as `"type":"twitter"`.
 |:-------------------|:-----------------------------------------------------------|:-----------------------------|
 | `startup_message`  | Confirmation post when PokeAlarm initialized               | `True`                       |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `gym`, `egg`, and `raid` sections of the JSON file.
 
 
 | Parameters      | Description                                       | Default                                       |
@@ -75,21 +75,21 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, `eg
 ### Example: Alarm Configuration Using Optional Parameters
 ```json
 {
-	"active": "False",
-	"type": "twitter",
-	"access_token": "YOUR_ACCESS_TOKEN",
-	"access_secret": "YOUR_ACCESS_SECRET",
-	"consumer_key": "YOUR_CONSUMER_KEY",
-	"consumer_secret": "YOUR_CONSUMER_SECRET",
-	"pokemon":{
-		"status": "A wild <pkmn> has appeared! Available until <24h_time> (<time_left>). <gmaps>"
-	},
-	"pokestop":{
-		"status": "Someone has placed a lure on a Pokestop! Lure will expire at <24h_time> (<time_left>).  <gmaps>"
-	},
-	"gym":{
-		"status":"A Team <old_team> gym has fallen! It is now controlled by <new_team>. <gmaps>"
-	},
+    "active": "False",
+    "type": "twitter",
+    "access_token": "YOUR_ACCESS_TOKEN",
+    "access_secret": "YOUR_ACCESS_SECRET",
+    "consumer_key": "YOUR_CONSUMER_KEY",
+    "consumer_secret": "YOUR_CONSUMER_SECRET",
+    "pokemon":{
+        "status": "A wild <pkmn> has appeared! Available until <24h_time> (<time_left>). <gmaps>"
+    },
+    "pokestop":{
+        "status": "Someone has placed a lure on a Pokestop! Lure will expire at <24h_time> (<time_left>).  <gmaps>"
+    },
+    "gym":{
+        "status":"A Team <old_team> gym has fallen! It is now controlled by <new_team>. <gmaps>"
+    },
     "egg": {
         "status": "lvl <raid_level> raid! Hatches at <begin_24h_time> (<begin_time_left>). <gmaps>"
     },

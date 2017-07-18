@@ -70,7 +70,7 @@ Parameters at the alarm level will be the default to alert-level parameters.
 | `venue`                    | Sends location in main message.                                      | `False` |
 | `startup_message`          | Confirmation post when PokeAlarm initialized                         | `True`  |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`,`egg`, `raid`, and `gym` sections of the JSON file. These parameters overide the alarm-level settings for this alert.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `gym`, `egg`, and `raid` sections of the JSON file. These parameters overide the alarm-level settings for this alert.
 
 | Parameters | Description                                      | Default													|
 | -----------|:-------------------------------------------------|:----------------------------------------------------------|
