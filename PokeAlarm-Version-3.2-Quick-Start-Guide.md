@@ -1,4 +1,4 @@
-Updated: 8 July 2017
+Updated: 18 July 2017
 
 ## Purpose
 * This document is intended to quickly provide PokeAlarm users with info to get started. It is not intended to replace the full wiki.
@@ -18,8 +18,6 @@ Updated: 8 July 2017
 * Contact us in the [#troubleshooting discord channel](https://discordapp.com/channels/215181169761714177/218822834225545216) or open a ticket on our [github page](https://github.com/kvangent/PokeAlarm/issues)
 
 ## Notes
-
-* 
 * Remember - you only need to edit the JSON, `geofence.txt`, and `config.ini` files.  Other modifications to the code are not supported!!!
 * PyCharm is a great IDE to manage your JSON and config files.  The EDU edition is free: https://www.jetbrains.com/pycharm-edu . This will will help you avoid those pesky formatting errors.
 * Alternatively, use an online JSON editor like http://www.jsoneditoronline.org which will yell at you if the json is incorrectly formatted
@@ -61,11 +59,6 @@ Example raids filter:
 ```json
 "raids":{
         "enabled":"True",
-        "filters": {
-            "min_level": "1",
-            "max_level": "5",
-            "ignore_eggs": "False"
-        },
         "default": {
             "min_dist":"0", "max_dist":"inf", "min_cp": "0", "max_cp": "999999", "min_iv":"0", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
@@ -111,19 +104,6 @@ Additionally there are a few new keywords:
 
 The following is the default alarms for egg and raid in Discord:
 
-### Raid
-```json
-"raid": {
-    "username": "Raid",
-    "content": "",
-    "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
-    "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/egg_<raid_level>.png",
-    "title": "Level <raid_level> Raid is available against <pkmn>!",
-    "url": "<gmaps>",
-    "body": "The raid is available until <24h_time> (<time_left>)."
-}
-```
-
 ### Egg
 ```json
 "egg": {
@@ -134,5 +114,18 @@ The following is the default alarms for egg and raid in Discord:
     "title": "Raid is incoming!",
     "url": "<gmaps>",
     "body": "A level <raid_level> raid will hatch <begin_24h_time> (<begin_time_left>)."
+}
+```
+
+### Raid
+```json
+"raid": {
+    "username": "Raid",
+    "content": "",
+    "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
+    "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/egg_<raid_level>.png",
+    "title": "Level <raid_level> Raid is available against <pkmn>!",
+    "url": "<gmaps>",
+    "body": "The raid is available until <24h_time> (<time_left>)."
 }
 ```
