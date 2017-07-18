@@ -117,7 +117,7 @@ For example if you have `link` as a google maps link and you disable the `image`
 | Parameters       |  Default                                       |
 | -----------------|-----------------------------------------------|
 | `message`        | `A level <raid_level> raid is upcoming!` |
-| `image`          | `https://raw.githubusercontent.com/fosJoddie/PokeAlarm/raids/icons/egg_<raid_level>.png`|
+| `image`          | `https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/egg_<raid_level>.png`|
 | `link`           | `<gmaps>`|
 | `name`           | `Egg`|
 | `description`    | `The egg will hatch <begin_24h_time> (<begin_time_left>).`|
@@ -165,7 +165,7 @@ For example if you have `link` as a google maps link and you disable the `image`
     },
     "egg": {
         "message": "A level <raid_level> raid is upcoming!",
-        "image": "https://raw.githubusercontent.com/fosJoddie/PokeAlarm/raids/icons/egg_<raid_level>.png",
+        "image": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/egg_<raid_level>.png",
         "link": "<gmaps>",
         "name": "Egg",
         "description": "The egg will hatch <begin_24h_time> (<begin_time_left>)."
