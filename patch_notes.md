@@ -1,46 +1,50 @@
 ## Patch History
 
-* [Patch 3.2](#Patch-3.2)
 * [Patch 3.1](#Patch-3.1)
+* [Patch 3.2](#Patch_3.2)
 
-## Patch 3.2 
+### Patch 3.2 --------------------------------------------------------------
 
-For information about how to update from 3.1 see the [migration guide](PokeAlarm-Version-3.2-Quick-Start-Guide)
+#### Filters
+* **Pokemon**
+    * Pokemon can now be filtered by their form_id (example": `"form": [0, 1, 2]`)
+    * Pokemon can now be filtered by their gender (example": `"gender": ["male", "female"`)
+* **Egg**
+    * "Egg" section is now added to the filters.json
+    * `'enabled'` allows incoming raid alerts to be toggled on or off
+    * `'min_level'` and `'max_level'` are used to limit the levels of incoming raids to alert on
 
-#### Raids
-There's now support to handle raid event notifications.  You can get alarms for both upcoming raids (eggs) and started raids (hatched eggs).
+* **Raids**
+    * "Raids" section is now added to the filters.json
+    * `'enabled'` allows raid alerts to be toggled on or off
+    * `'default'` allows setting default settings for filters, and has the same options as pokemon filters do
+    *  Filters for pokemon raids can be set similar to the "pokemon" section, with the `"name": {}` scheme
 
-
-
-##### Raid Filters
-Filters now have a segment for what kind of raids to trigger alarms. See the updated filters.example.json for a full example.
-    * The label `filter` is used to determine some common properties of the filter:
-        * `min_level` -  minimum raid level as a number, inclusive
-        * `max_level` - maximum raid level as a number, inclusive
-        * `ignore_eggs` - If set to true, ignores any raid without a pokemon set. Boolean value (`True`/`False`).
-    * The rest of the raid filter works exactly like the pokemon filter, one `default` field and a list of Pokemon.      
-
-**Raid alarms** 
-
-There are now two new alarm types: `raid` and `egg`. If the filter for raid is enabled, default formats for your alarm will be used unless otherwise specificed.
-The wiki pages for different alarm services has been updated with examples for both eggs and raids. (See sidebar). 
-* **Egg**: Message that is sent when a raid is first announced but we do not know the pokemon that will be in the raid.
-* **Raid**: Message that is sent when a raid has started and the pokemon is revealed. 
-
-**Dynamic Text Substitution**
- 
-There's new keywords for dynamic text substitution that are only available for raids
-For all raids alarms : 
-* `<raid_level>` - the level of the raid
-* `<begin_24h_time>`, `<begin_12h_time>` - the start time for the raid in 24 hour or 12 hour format
- * `<begin_time_left>` - the amount of time left until raid begins
-
-For raid messages some pokemon information is available: `<pkmn>`, `<pkmn_id>`, `<cp>` in addition to all the move messages:  `<quick_move>`, `<quick_id>`, `<quick_damage>`, `<quick_dps>`, `<quick_duration>`, `<quick_energy>`, `<charge_move>`, `<charge_id>`, `<charge_damage>`, `<charge_dps>`, `<charge_duration>`, `<charge_energy>`.
-
-Do note that IV for raid pokemon is currently reported as 100%, and is therefore meaningless (real IV is random when catching)
-  
-
-## Patch 3.1
+#### Dynamic Text Substitutions
+* **General**
+    * Added `'applemaps'` to most alerts for AppleMaps link for iOS users
+    * Time DTS now switch to ##h##m format when longer than one hour
+* **Pokemon**
+    * Added support for the following subsitutions: `'cp', 'form', 'form_id', 'level'`
+    * Added `'big_karp'` that displays 'big' on big magikarp and `'tiny_rat'` that displays 'tiny' on small rattata 
+* **Egg**
+    * "Egg" alerts have the following substitutions: `'type', 'id', 'raid_level', 'raid_end', 'raid_being', 'lat', 'lng'`
+* **Raid**
+    * "Raid" alerts have the following substitutions: `'type', 'id', 'pkmn_id', 'cp', 'quick_id', 'quick_damage', 'quick_dps', 'quick_duration', 'quick_energy', 'charge_id', 'charge_damage', 'charge_dps', 'charge_duration', 'charge_energy', 'raid_level', 'raid_end', 'raid_begin' 'lat', 'lng'`
+* **Gyms**
+    * Added the following 'Gym Leader' substitutions: `'old_team_id', 'new_team_leader', 'old_team_leader'`
+    
+#### Alarms
+* **Twitter**
+    * Twitter now automatically truncates to 140 characters - it will preserve <gmaps> links if added to the end
+* **Discord**
+    * Discord usernames now automatically truncates usernames to 32 characters
+    * Added `'avatar_url'` to change the avatar of the post
+    * Added `content` field that posts a message before the embed, allows for taging by user or roll
+    * Added `'disable_embed'` that disables the discord embeds when set to `true`
+    
+    
+### Patch_3.1 --------------------------------------------------------------
 
 #### Filters
 * **Multifilters** - Each filter can now be one of the following:
