@@ -120,7 +120,7 @@ For example if you have `link` as a google maps link and you disable the `image`
 | `image`          | `https://raw.githubusercontent.com/fosJoddie/PokeAlarm/raids/icons/egg_<raid_level>.png`|
 | `link`           | `<gmaps>`|
 | `name`           | `Egg`|
-| `description     | `The egg will hatch <begin_24h_time> (<begin_time_left>).`|
+| `description`    | `The egg will hatch <begin_24h_time> (<begin_time_left>).`|
 | `caption`        | None |    
     
 `raid` default values:    
@@ -148,7 +148,7 @@ For example if you have `link` as a google maps link and you disable the `image`
         "link": "<gmaps>",
         "image" : "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
         "description": "Address: <address>",
-                "name": "<pkmn>"		
+        "name": "<pkmn>"		
     },
     "pokestop":{
         "message": "Someone has placed a lure on a Pokestop! Lure will expire at <24h_time> (<time_left>).",

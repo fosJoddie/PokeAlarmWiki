@@ -21,9 +21,9 @@ This guide assumes:
 
 ## Introduction
 
-The `filters.json` configuration file filters Pokemon, Gym, Raids and Pokestop notifications so that you receive only the notifications you want.
+The `filters.json` configuration file filters Gym, Pokestop, Pokemon, Egg, and Raid notifications so that you receive only the notifications you want.
 
-The basic structure of `filters.json` contains 4 sections:
+The basic structure of `filters.json` contains 5 sections:
 
 ```
 [
@@ -35,6 +35,9 @@ The basic structure of `filters.json` contains 4 sections:
 	},
 	"pokemon":{
 	    POKEMON_FILTERS_ARE_HERE
+	},
+	"eggs": {
+	    EGG_FILTERS_HERE
 	},
 	"raids": {
 	    RAID_FILTERS_ARE_HERE
@@ -372,17 +375,11 @@ Raid filters has 3 sections: enabled, default pokemon filtering and individual p
 ```json
 "raids": {
     "enabled": "False",
-    "filters": {
-        "min_level": "1",
-        "max_level": "5",
-        "ignore_eggs": "False"
-    },
     "default": {
         "min_dist":"0", "max_dist":"inf", "min_cp": "0", "max_cp": "999999", "min_iv":"0", "max_iv":"100",
         "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
         "quick_move": null, "charge_move": null, "moveset": null,
-        "size": null, "gender": null, "form": null,
-        "ignore_missing": "False"
+        "size": null, "gender": null, "form": null,"ignore_missing": "False"
     },
     "Tyranitar": { "True" } 
 }
@@ -404,8 +401,7 @@ Below is an example of the Default level options:
         "min_dist":"0", "max_dist":"inf", "min_cp": "0", "max_cp": "999999", "min_iv":"0", "max_iv":"100",
         "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
         "quick_move": null, "charge_move": null, "moveset": null,
-        "size": null, "gender": null, "form": null,
-        "ignore_missing": "False"
+        "size": null, "gender": null, "form": null, "ignore_missing": "False"
     }
 ```
 
@@ -441,8 +437,7 @@ Reports all known egg levels and raid pokemon
         "min_dist":"0", "max_dist":"inf", "min_cp": "0", "max_cp": "999999", "min_iv":"0", "max_iv":"100",
         "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
         "quick_move": null, "charge_move": null, "moveset": null,
-        "size": null, "gender": null, "form": null,
-        "ignore_missing": "False"
+        "size": null, "gender": null, "form": null, "ignore_missing": "False"
     },
     "Bayleef":"True",
     "Croconaw":"True",
@@ -484,8 +479,7 @@ Reports all known egg levels and raid pokemon
         "min_dist":"0", "max_dist":"inf", "min_cp": "0", "max_cp": "999999", "min_iv":"0", "max_iv":"100",
         "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
         "quick_move": null, "charge_move": null, "moveset": null,
-        "size": null, "gender": null, "form": null,
-        "ignore_missing": "False"
+        "size": null, "gender": null, "form": null, "ignore_missing": "False"
     },
     "Bayleef":"True",
     "Croconaw":"True",
@@ -527,8 +521,7 @@ Reports all known egg levels and raid pokemon
         "min_dist":"0", "max_dist":"inf", "min_cp": "0", "max_cp": "999999", "min_iv":"0", "max_iv":"100",
         "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
         "quick_move": null, "charge_move": null, "moveset": null,
-        "size": null, "gender": null, "form": null,
-        "ignore_missing": "False"
+        "size": null, "gender": null, "form": null, "ignore_missing": "False"
     }
 }
 ```
@@ -547,8 +540,7 @@ Reports all known egg levels and raid pokemon
          "min_dist":"0", "max_dist":"inf", "min_cp": "0", "max_cp": "999999", "min_iv":"0", "max_iv":"100",
          "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
          "quick_move": null, "charge_move": null, "moveset": null,
-         "size": null, "gender": null, "form": null,
-         "ignore_missing": "False"
+         "size": null, "gender": null, "form": null, "ignore_missing": "False"
      },
      "Alakazam":"True",
      "Machamp":"True",

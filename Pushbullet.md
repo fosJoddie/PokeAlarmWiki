@@ -61,7 +61,7 @@ These optional parameters are entered at the same level as `"type":"pushbullet"`
 |:-------------------|:-----------------------------------------------------------|:-----------------------------|
 | `startup_message`  | Confirmation post when PokeAlarm initialized               | `True`                       |
 
-These optional parameters below are applicable to the `pokemon`, `pokestop`, `egg`, `raid`, and `gym` sections of the JSON file.
+These optional parameters below are applicable to the `pokemon`, `pokestop`, `gym`, `egg`, and `raid` sections of the JSON file.
 
 | Parameters     | Description                                       | Default                                       |
 |:-------------- |:--------------------------------------------------|:----------------------------------------------|
@@ -73,28 +73,28 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, `eg
 ### Example: Alarm Configuration Using Optional Parameters
 ```json
 {
-	"active":"True",
-	"type":"pushbullet",
-	"api_key":"YOUR_API_KEY",
-	"channel":"DEFAULT_CHANNEL",
-	"pokemon":{
-		"title":"A wild <pkmn> has appeared!",
-		"url":"<gmaps>",
-		"body":"Available until <24h_time> (<time_left>).",
-		"channel":"OVERRIDES_DEFAULT_CHANNEL"
-	},
-	"pokestop":{
-		"title":"Someone has placed a lure on a Pokestop!",
-		"url":"<gmaps>",
-		"body":"Lure will expire at <24h_time> (<time_left>).",
-		"channel":"OVERRIDES_DEFAULT_CHANNEL"
-	},
-	"gym":{
-		"title":"A Team <old_team> gym has fallen!",
-		"url":"<gmaps>",
-		"body":"It is now controlled by <new_team>.",
-		"channel":"OVERRIDES_DEFAULT_CHANNEL"
-	},
+    "active":"True",
+    "type":"pushbullet",
+    "api_key":"YOUR_API_KEY",
+    "channel":"DEFAULT_CHANNEL",
+    "pokemon":{
+        "title":"A wild <pkmn> has appeared!",
+        "url":"<gmaps>",
+        "body":"Available until <24h_time> (<time_left>).",
+        "channel":"OVERRIDES_DEFAULT_CHANNEL"
+    },
+    "pokestop":{
+        "title":"Someone has placed a lure on a Pokestop!",
+        "url":"<gmaps>",
+        "body":"Lure will expire at <24h_time> (<time_left>).",
+        "channel":"OVERRIDES_DEFAULT_CHANNEL"
+    },
+    "gym":{
+        "title":"A Team <old_team> gym has fallen!",
+        "url":"<gmaps>",
+        "body":"It is now controlled by <new_team>.",
+        "channel":"OVERRIDES_DEFAULT_CHANNEL"
+    },
     "egg": {
         "title": "A level <raid_level> raid is incoming!",
         "url": "<gmaps>",

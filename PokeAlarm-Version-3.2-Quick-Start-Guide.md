@@ -9,7 +9,7 @@ Updated: 8 July 2017
 * [Notes](#notes)
 * [Introduction](#introduction)
   * [Upgrading from 3.1](#upgrading-from-3.1)
-  * [Filters](#Updating Filter Configuration)
+  * [Filters](#updating-filter-configuration)
   * [Alarms](#alarms)
 
 ## Before you begin
