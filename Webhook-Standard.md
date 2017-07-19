@@ -132,6 +132,24 @@ Pokemon standard now includes moveset and IVs as of commit [oc1b4](https://githu
 }
 ```
 
+## Egg example
+
+Take note that the type for egg is `raid` because it is collected from the same webhook event from RocketMap as raids are.
+
+```json
+{ 
+    "type": "raid",
+    "message": {
+        "gym_id": "gym_id",
+        "start": 1499244052,
+        "end": 1499246052 ,
+        "level": 5,
+        "latitude": 12.345678,
+        "longitude": 12.345678
+    }
+}
+```
+
 ## Raid Example
 
 ```json
