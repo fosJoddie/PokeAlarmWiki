@@ -118,8 +118,8 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, `gy
     "egg": {
         "webhook_url":"DISCORD_WEBHOOK_URL_FOR_EGG_CHANNEL",
         "username": "Egg",
-        "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
-        "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+        "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/egg_<raid_level>.png",
+        "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/egg_<raid_level>.png",
         "title": "Raid is incoming!",
         "url": "<gmaps>",
         "body": "A level <raid_level> raid will hatch <begin_24h_time> (<begin_time_left>)."
@@ -128,7 +128,7 @@ These optional parameters below are applicable to the `pokemon`, `pokestop`, `gy
         "webhook_url":"DISCORD_WEBHOOK_URL_FOR_RAID_CHANNEL",
         "username": "Raid",
         "icon_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/<pkmn_id>.png",
-        "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/raids/icons/egg_<raid_level>.png",
+        "avatar_url": "https://raw.githubusercontent.com/kvangent/PokeAlarm/master/icons/egg_<raid_level>.png",
         "title": "Level <raid_level> Raid is available against <pkmn>!",
         "url": "<gmaps>",
         "body": "The raid is available until <24h_time> (<time_left>)."
